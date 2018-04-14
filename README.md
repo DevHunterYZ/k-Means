@@ -1,2 +1,3 @@
 # k-Means algorithm
-[![image](https://i.hizliresim.com/jydRDD.png)](https://hizliresim.com/jydRDD)
+
+[![image](https://i.hizliresim.com/jydRDD.png)]
