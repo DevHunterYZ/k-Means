@@ -1,18 +1,19 @@
+# Kütüphaneleri yükleyelim.
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+# Verimizi oluşturalım.
 df = pd.DataFrame({
     'x': [12, 20, 28, 18, 29, 33, 24, 45, 45, 52, 51, 52, 55, 53, 55, 61, 64, 69, 72],
     'y': [39, 36, 30, 52, 54, 46, 55, 59, 63, 70, 66, 63, 58, 23, 14, 8, 19, 7, 24]
 })
 
-
+#x ve y datası 3 kümeye ayrılır ve grafiği çizdirilir.
 np.random.seed(200)
 k = 3
 # centroids[i] = [x, y]
 centroids = {
-    i+1: [np.random.randint(0, 80), np.random.randint(0, 80)]
+    i+1: [np.random.randint(0, 80), np.random.randint(0, 80)] #0-80 arası rastgele 3 yer belirler. 
     for i in range(k)
 }
 
@@ -24,13 +25,14 @@ for i in centroids.keys():
 plt.xlim(0, 80)
 plt.ylim(0, 80)
 plt.show()
+# Merkeze uzaklık hesaplanır(x ve y kümenin ağırlık merkezinden çıkarılır.)
 def assignment(df, centroids):
     for i in centroids.keys():
-        # sqrt((x1 - x2)^2 - (y1 - y2)^2)
+        # sqrt((x1 - x2)^2 - (y1 - y2)^2) 
         df['distance_from_{}'.format(i)] = (
             np.sqrt(
                 (df['x'] - centroids[i][0]) ** 2
-                + (df['y'] - centroids[i][1]) ** 2
+                + (df['y'] - centroids[i][1]) ** 2      
             )
         )
     centroid_distance_cols = ['distance_from_{}'.format(i) for i in centroids.keys()]
