@@ -80,7 +80,7 @@ for i in old_centroids.keys():
 plt.show()
 df = assignment(df, centroids)
 
-# Plot results
+# Sonuçları çizdirelim.
 fig = plt.figure(figsize=(5, 5))
 plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
 for i in centroids.keys():
