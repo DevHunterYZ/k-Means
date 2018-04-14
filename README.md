@@ -1,2 +1,4 @@
 #kmeans algorithm 
-![Logo]([url=https://image.ibb.co/nyVRK7/kmeans6.png)
+
+
+![image](https://image.ibb.co/nyVRK7/kmeans6.png)
